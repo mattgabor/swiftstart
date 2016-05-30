@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8803B06F1CFBFA6700637302 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8803B06E1CFBFA6700637302 /* Model.swift */; };
+		8803B0701CFBFB6C00637302 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88486BB51CFA953A00C4C27B /* ViewController.swift */; };
 		88486BB41CFA953A00C4C27B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88486BB31CFA953A00C4C27B /* AppDelegate.swift */; };
-		88486BB61CFA953A00C4C27B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88486BB51CFA953A00C4C27B /* ViewController.swift */; };
 		88486BB91CFA953A00C4C27B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88486BB71CFA953A00C4C27B /* Main.storyboard */; };
 		88486BBB1CFA953A00C4C27B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88486BBA1CFA953A00C4C27B /* Assets.xcassets */; };
 		88486BBE1CFA953A00C4C27B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88486BBC1CFA953A00C4C27B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8803B06E1CFBFA6700637302 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		88486BB01CFA953A00C4C27B /* SwiftStart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftStart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88486BB31CFA953A00C4C27B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88486BB51CFA953A00C4C27B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,11 +37,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8803B06B1CFBF6C100637302 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8803B06E1CFBFA6700637302 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8803B06C1CFBF6DB00637302 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8803B06D1CFBF6E200637302 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				88486BB51CFA953A00C4C27B /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		88486BA71CFA953A00C4C27B = {
 			isa = PBXGroup;
 			children = (
-				88486BB21CFA953A00C4C27B /* SwiftStart */,
 				88486BB11CFA953A00C4C27B /* Products */,
+				88486BB21CFA953A00C4C27B /* SwiftStart */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,12 +79,14 @@
 		88486BB21CFA953A00C4C27B /* SwiftStart */ = {
 			isa = PBXGroup;
 			children = (
+				8803B06D1CFBF6E200637302 /* Controller */,
+				8803B06B1CFBF6C100637302 /* Model */,
+				8803B06C1CFBF6DB00637302 /* View */,
 				88486BB31CFA953A00C4C27B /* AppDelegate.swift */,
-				88486BB51CFA953A00C4C27B /* ViewController.swift */,
-				88486BB71CFA953A00C4C27B /* Main.storyboard */,
 				88486BBA1CFA953A00C4C27B /* Assets.xcassets */,
-				88486BBC1CFA953A00C4C27B /* LaunchScreen.storyboard */,
 				88486BBF1CFA953A00C4C27B /* Info.plist */,
+				88486BBC1CFA953A00C4C27B /* LaunchScreen.storyboard */,
+				88486BB71CFA953A00C4C27B /* Main.storyboard */,
 			);
 			path = SwiftStart;
 			sourceTree = "<group>";
@@ -144,7 +171,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\nTAGS=\"TODO:|FIXME:\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"";
+			shellScript = "TAGS=\"TODO:|FIXME:\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -153,7 +180,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88486BB61CFA953A00C4C27B /* ViewController.swift in Sources */,
+				8803B0701CFBFB6C00637302 /* ViewController.swift in Sources */,
+				8803B06F1CFBFA6700637302 /* Model.swift in Sources */,
 				88486BB41CFA953A00C4C27B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,6 +195,7 @@
 				88486BB81CFA953A00C4C27B /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		88486BBC1CFA953A00C4C27B /* LaunchScreen.storyboard */ = {
@@ -175,6 +204,7 @@
 				88486BBD1CFA953A00C4C27B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
