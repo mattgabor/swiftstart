@@ -160,12 +160,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = mattgabor;
 				TargetAttributes = {
 					88486BAF1CFA953A00C4C27B = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 29USK5L42E;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -404,6 +405,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.DoubleM.SwiftStart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -419,6 +421,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.DoubleM.SwiftStart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
