@@ -56,7 +56,7 @@
     fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
   // If you are receiving a notification message while your app is in the background,
   // this callback will not be fired till the user taps on the notification launching the application.
-  // TODO: Handle data of notification
+  // Handle data of notification
 
   // Print message ID.
   NSLog(@"Message ID: %@", userInfo[@"gcm.message_id"]);
@@ -77,7 +77,7 @@
   // Connect to FCM since connection may have failed when attempted before having a token.
   [self connectToFcm];
 
-  // TODO: If necessary send token to appliation server.
+  // If necessary send token to appliation server.
 }
 // [END refresh_token]
 

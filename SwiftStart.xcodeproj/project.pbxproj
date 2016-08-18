@@ -11,6 +11,11 @@
 		8803B0701CFBFB6C00637302 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88486BB51CFA953A00C4C27B /* ViewController.swift */; };
 		8803B0731CFBFEF400637302 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8803B0711CFBFEF400637302 /* Login.storyboard */; };
 		8803B0761CFC05C200637302 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8803B0751CFC05C200637302 /* GoogleService-Info.plist */; };
+		882391F61D65946C0026FE10 /* ExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882391F11D65946C0026FE10 /* ExampleCell.swift */; };
+		882391F71D65946C0026FE10 /* ExampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882391F21D65946C0026FE10 /* ExampleTableViewController.swift */; };
+		882391F81D65946C0026FE10 /* ExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882391F31D65946C0026FE10 /* ExampleView.swift */; };
+		882391F91D65946C0026FE10 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882391F41D65946C0026FE10 /* ExampleViewController.swift */; };
+		882391FA1D65946C0026FE10 /* ExampleViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882391F51D65946C0026FE10 /* ExampleViewControllerExtension.swift */; };
 		88486BB41CFA953A00C4C27B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88486BB31CFA953A00C4C27B /* AppDelegate.swift */; };
 		88486BB91CFA953A00C4C27B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88486BB71CFA953A00C4C27B /* Main.storyboard */; };
 		88486BBB1CFA953A00C4C27B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88486BBA1CFA953A00C4C27B /* Assets.xcassets */; };
@@ -24,6 +29,11 @@
 		8803B06E1CFBFA6700637302 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		8803B0721CFBFEF400637302 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		8803B0751CFC05C200637302 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "SwiftStart/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		882391F11D65946C0026FE10 /* ExampleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCell.swift; sourceTree = "<group>"; };
+		882391F21D65946C0026FE10 /* ExampleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleTableViewController.swift; sourceTree = "<group>"; };
+		882391F31D65946C0026FE10 /* ExampleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
+		882391F41D65946C0026FE10 /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		882391F51D65946C0026FE10 /* ExampleViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewControllerExtension.swift; sourceTree = "<group>"; };
 		88486BB01CFA953A00C4C27B /* SwiftStart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftStart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88486BB31CFA953A00C4C27B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88486BB51CFA953A00C4C27B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +106,18 @@
 			name = Storyboards;
 			sourceTree = "<group>";
 		};
+		882391F01D65946C0026FE10 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				882391F11D65946C0026FE10 /* ExampleCell.swift */,
+				882391F21D65946C0026FE10 /* ExampleTableViewController.swift */,
+				882391F31D65946C0026FE10 /* ExampleView.swift */,
+				882391F41D65946C0026FE10 /* ExampleViewController.swift */,
+				882391F51D65946C0026FE10 /* ExampleViewControllerExtension.swift */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
 		88486BA71CFA953A00C4C27B = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +140,7 @@
 		88486BB21CFA953A00C4C27B /* SwiftStart */ = {
 			isa = PBXGroup;
 			children = (
+				882391F01D65946C0026FE10 /* Templates */,
 				8803B06D1CFBF6E200637302 /* Controller */,
 				8803B06B1CFBF6C100637302 /* Model */,
 				8803B06C1CFBF6DB00637302 /* View */,
@@ -270,9 +293,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				882391F71D65946C0026FE10 /* ExampleTableViewController.swift in Sources */,
+				882391F61D65946C0026FE10 /* ExampleCell.swift in Sources */,
 				8803B0701CFBFB6C00637302 /* ViewController.swift in Sources */,
 				8803B06F1CFBFA6700637302 /* Model.swift in Sources */,
+				882391F91D65946C0026FE10 /* ExampleViewController.swift in Sources */,
 				88486BB41CFA953A00C4C27B /* AppDelegate.swift in Sources */,
+				882391F81D65946C0026FE10 /* ExampleView.swift in Sources */,
+				882391FA1D65946C0026FE10 /* ExampleViewControllerExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
